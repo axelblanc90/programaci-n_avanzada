@@ -1,0 +1,138 @@
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+  color: #f5f5f5;
+  min-height: 100vh;
+}
+
+header {
+  background: rgba(20, 20, 30, 0.95);
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #00d2ff;
+  text-shadow: 0 2px 8px #222;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #00d2ff;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: rgba(34, 49, 63, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 2.5rem 2rem;
+}
+
+.launches-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.07);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+  color: #00d2ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.button {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    padding: 1.5rem 0.5rem;
+  }
+  .launches-container {
+    gap: 1rem;
+  }
+  .card {
+    max-width: 45vw;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    padding: 1rem 0.2rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .launches-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 95vw;
+    min-width: 140px;
+  }
+}
